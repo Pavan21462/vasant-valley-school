@@ -1,11 +1,7 @@
-import React from 'react'
+import Home from "./pages/Home";
 
 const App = () => {
-  return (
-    <div>
-      <h1 className='bg-black text-white'>hellow</h1>
-    </div>
-  )
+  return <Home />;
 }
 
-export default App
+export default App;
