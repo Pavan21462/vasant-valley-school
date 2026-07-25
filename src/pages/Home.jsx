@@ -1,4 +1,5 @@
 import About from "../components/About";
+import Contact from "../components/Contact";
 import Facilities from "../components/Facilities";
 import Gallery from "../components/Gallery";
 import Hero from "../components/Hero";
@@ -16,6 +17,7 @@ const Home = () => {
             <Statistics />
             <Facilities />
             <Gallery />
+            <Contact />
         </>
     );
 };
