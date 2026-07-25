@@ -16,7 +16,7 @@ const Gallery = () => {
     ];
 
     return (
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white" id="gallery">
             <div className="max-w-6xl mx-auto px-5">
 
                 <h2 className="text-4xl font-bold text-center text-blue-700">
@@ -30,12 +30,7 @@ const Gallery = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                     {images.map((img, index) => (
-                        <img
-                            key={index}
-                            src={img}
-                            alt="Gallery"
-                            className="rounded-xl shadow-md hover:scale-105 transition duration-300"
-                        />
+                        <img key={index} src={img} alt="Gallery" className="rounded-xl shadow-md hover:scale-105 transition duration-300" />
                     ))}
 
                 </div>

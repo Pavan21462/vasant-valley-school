@@ -6,6 +6,7 @@ const Hero = () => {
         <section
             className="relative h-screen bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImage})` }}
+            id="home"
         >
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/50"></div>
@@ -18,7 +19,7 @@ const Hero = () => {
                     transition={{ duration: 0.8 }}
                     className="max-w-3xl text-center text-white"
                 >
-                    <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+                    <h1 className="text-5xl md:text-7xl font-bold">
                         Inspiring Excellence,
                         <br />
                         Shaping Tomorrow
@@ -30,13 +31,19 @@ const Hero = () => {
                     </p>
 
                     <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                        <button className="rounded-full bg-blue-600 px-8 py-3 font-semibold hover:bg-blue-700 transition">
+                        <a
+                            href="#gallery"
+                            className="rounded-full bg-blue-600 px-8 py-3 font-semibold hover:bg-blue-700 transition"
+                        >
                             Explore Campus
-                        </button>
+                        </a>
 
-                        <button className="rounded-full border-2 border-white px-8 py-3 font-semibold hover:bg-white hover:text-black transition">
+                        <a
+                            href="#contact"
+                            className="rounded-full border-2 border-white px-8 py-3 font-semibold hover:bg-white hover:text-black transition"
+                        >
                             Apply Now
-                        </button>
+                        </a>
                     </div>
                 </motion.div>
             </div>

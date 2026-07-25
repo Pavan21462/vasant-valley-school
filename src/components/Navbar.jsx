@@ -5,12 +5,11 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const navLinks = [
-        "Home",
-        "About",
-        "Academics",
-        "Admissions",
-        "Gallery",
-        "Contact",
+        { name: "Home", href: "#home" },
+        { name: "About", href: "#about" },
+        { name: "Facilities", href: "#facilities" },
+        { name: "Gallery", href: "#gallery" },
+        { name: "Contact", href: "#contact" },
     ];
 
     return (
@@ -27,24 +26,19 @@ const Navbar = () => {
 
                 <ul className="hidden lg:flex items-center gap-8 font-medium">
                     {navLinks.map((link) => (
-                        <li
-                            key={link}
-                            className="cursor-pointer hover:text-blue-700 transition"
-                        >
-                            {link}
+                        <li key={link.name}>
+                            <a href={link.href} className="hover:text-blue-700 transition">
+                                {link.name}
+                            </a>
                         </li>
                     ))}
 
-                    <button className="bg-blue-700 text-white px-5 py-2 rounded-full hover:bg-blue-800 transition">
+                    <a href="#contact" className="bg-blue-700 text-white px-5 py-2 rounded-full hover:bg-blue-800 transition" >
                         Apply Now
-                    </button>
+                    </a>
                 </ul>
 
-
-                <div
-                    className="lg:hidden cursor-pointer"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                >
+                <div className="lg:hidden cursor-pointer" onClick={() => setMenuOpen(!menuOpen)} >
                     {menuOpen ? <HiX size={30} /> : <HiMenuAlt3 size={30} />}
                 </div>
             </div>
@@ -53,18 +47,15 @@ const Navbar = () => {
             {menuOpen && (
                 <div className="lg:hidden bg-white shadow-md">
                     {navLinks.map((link) => (
-                        <div
-                            key={link}
-                            className="px-6 py-4 border-b hover:bg-gray-100 cursor-pointer"
-                        >
-                            {link}
-                        </div>
+                        <a key={link.name} href={link.href} onClick={() => setMenuOpen(false)} className="block px-6 py-4 border-b hover:bg-gray-100">
+                            {link.name}
+                        </a>
                     ))}
 
                     <div className="p-4">
-                        <button className="w-full bg-blue-700 text-white py-3 rounded-lg">
-                            Apply Now
-                        </button>
+                        <a href="#contact" className="block w-full bg-blue-700 text-white py-3 rounded-lg text-center hover:bg-blue-800 transition">
+                            Contact
+                        </a>
                     </div>
                 </div>
             )}

@@ -9,7 +9,7 @@ import {
 
 const Facilities = () => {
     return (
-        <section className="py-16 bg-gray-100">
+        <section className="py-16 bg-gray-100" id="facilities">
             <div className="max-w-6xl mx-auto px-5">
 
                 <h2 className="text-4xl font-bold text-center text-blue-700">

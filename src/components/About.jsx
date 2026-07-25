@@ -4,23 +4,17 @@ import aboutImage from "../assets/images/about.jpg";
 
 const About = () => {
     return (
-        <section className="bg-gray-50 py-24">
+        <section className="bg-gray-50 py-24 overflow-hidden" id="about">
             <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
-                {/* Image */}
                 <motion.div
                     initial={{ opacity: 0, x: -80 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <img
-                        src={aboutImage}
-                        alt="School Campus"
-                        className="rounded-3xl shadow-2xl"
-                    />
+                    <img src={aboutImage} alt="School Campus" className="rounded-3xl shadow-2xl" />
                 </motion.div>
 
-                {/* Content */}
                 <motion.div
                     initial={{ opacity: 0, x: 80 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -73,7 +67,9 @@ const About = () => {
                     </div>
 
                     <button className="mt-10 bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 duration-300">
-                        Learn More
+                        <a href="#facilities" className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700">
+                            Learn More
+                        </a>
                     </button>
 
                 </motion.div>

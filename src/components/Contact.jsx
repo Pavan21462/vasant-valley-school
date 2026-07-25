@@ -1,6 +1,6 @@
 const Contact = () => {
     return (
-        <section className="py-16 bg-gray-100">
+        <section className="py-16 bg-gray-100" id="contact">
             <div className="max-w-6xl mx-auto px-5">
 
                 <h2 className="text-4xl font-bold text-center text-blue-700">
@@ -13,7 +13,6 @@ const Contact = () => {
 
                 <div className="grid md:grid-cols-2 gap-10">
 
-                    {/* Left */}
                     <div>
                         <h3 className="text-2xl font-semibold mb-5">
                             Get In Touch
@@ -32,30 +31,15 @@ const Contact = () => {
                         </p>
                     </div>
 
-                    {/* Right */}
                     <form className="space-y-4">
 
-                        <input
-                            type="text"
-                            placeholder="Your Name"
-                            className="w-full border rounded-lg p-3"
-                        />
+                        <input type="text" placeholder="Your Name" className="w-full border rounded-lg p-3" />
 
-                        <input
-                            type="email"
-                            placeholder="Your Email"
-                            className="w-full border rounded-lg p-3"
-                        />
+                        <input type="email" placeholder="Your Email" className="w-full border rounded-lg p-3" />
 
-                        <textarea
-                            rows="5"
-                            placeholder="Message"
-                            className="w-full border rounded-lg p-3"
-                        />
+                        <textarea rows="5" placeholder="Message" className="w-full border rounded-lg p-3" />
 
-                        <button
-                            className="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800"
-                        >
+                        <button className="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">
                             Send Message
                         </button>
 
