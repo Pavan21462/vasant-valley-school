@@ -1,6 +1,7 @@
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Facilities from "../components/Facilities";
+import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
@@ -18,6 +19,7 @@ const Home = () => {
             <Facilities />
             <Gallery />
             <Contact />
+            <Footer />
         </>
     );
 };
