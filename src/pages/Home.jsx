@@ -1,5 +1,6 @@
 import About from "../components/About";
 import Facilities from "../components/Facilities";
+import Gallery from "../components/Gallery";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Statistics from "../components/Statistics";
@@ -14,6 +15,7 @@ const Home = () => {
             <WhyChooseUs />
             <Statistics />
             <Facilities />
+            <Gallery />
         </>
     );
 };
